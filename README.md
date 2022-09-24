@@ -1,6 +1,6 @@
-# flahchat
+# Chatter
 
-A new Flutter project.
+A chatting app , where user can register , login and can chat with others . Firebase is used for Authentication and storage of messages. 
 
 ## Getting Started
 
