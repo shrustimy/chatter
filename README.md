@@ -2,6 +2,11 @@
 
 A chatting app , where user can register , login and can chat with others . Firebase is used for Authentication and firestore database is used for storage of messages. 
 
+- By building this app , I got to learn about integration of backend with frontend
+- Learnt about animations and Mixins in Flutter
+- Authentication of Email and password of the user
+- Navigation to different screens 
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
