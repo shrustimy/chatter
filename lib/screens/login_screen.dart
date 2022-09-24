@@ -20,7 +20,7 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: Colors.deepPurple.shade50,
       body: ModalProgressHUD(
         inAsyncCall: showSpinner,
         child: Padding(
@@ -67,7 +67,7 @@ class _LoginScreenState extends State<LoginScreen> {
               ),
               RoundedButton(
                 title: 'Log In',
-                colour: Colors.lightBlueAccent,
+                colour: Colors.deepPurple.shade300,
                 onPressed: () async {
                   setState(() {
                     showSpinner = true;

@@ -39,6 +39,7 @@ class _ChatScreenState extends State<ChatScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.deepPurple.shade50,
       appBar: AppBar(
         leading: null,
         actions: <Widget>[
@@ -49,8 +50,8 @@ class _ChatScreenState extends State<ChatScreen> {
                 Navigator.pop(context);
               }),
         ],
-        title: Text('⚡️Chat'),
-        backgroundColor: Colors.lightBlueAccent,
+        title: Text('️Chat'),
+        backgroundColor: Colors.deepPurple.shade300,
       ),
       body: SafeArea(
         child: Column(
@@ -105,7 +106,7 @@ class MessagesStream extends StatelessWidget {
         if (!snapshot.hasData) {
           return Center(
             child: CircularProgressIndicator(
-              backgroundColor: Colors.lightBlueAccent,
+              backgroundColor: Colors.deepPurple.shade300,
             ),
           );
         }
@@ -171,13 +172,13 @@ class MessageBubble extends StatelessWidget {
               topRight: Radius.circular(30.0),
             ),
             elevation: 5.0,
-            color: isMe ? Colors.lightBlueAccent : Colors.white,
+            color: isMe ? Colors.deepPurple.shade300 : Colors.grey.shade50,
             child: Padding(
               padding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
               child: Text(
                 text,
                 style: TextStyle(
-                  color: isMe ? Colors.white : Colors.black54,
+                  color: isMe ? Colors.white : Colors.black,
                   fontSize: 15.0,
                 ),
               ),

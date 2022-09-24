@@ -22,7 +22,7 @@ class _WelcomeScreenState extends State<WelcomeScreen>
 
     controller =
         AnimationController(duration: Duration(seconds: 1), vsync: this);
-    animation = ColorTween(begin: Colors.blueGrey, end: Colors.white)
+    animation = ColorTween(begin: Colors.deepPurple.shade50, end: Colors.deepPurple.shade50)
         .animate(controller);
     controller.forward();
     controller.addListener(() {
@@ -46,37 +46,39 @@ class _WelcomeScreenState extends State<WelcomeScreen>
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
-            Row(
-              children: <Widget>[
-                Hero(
-                  tag: 'logo',
-                  child: Container(
-                    child: Image.asset('images/logo.png'),
-                    height: 60.0,
-                  ),
-                ),
-                TypewriterAnimatedTextKit(
-                  text: ['Flash Chat'],
-                  textStyle: TextStyle(
-                    fontSize: 45.0,
-                    fontWeight: FontWeight.w900,
-                  ),
-                ),
-              ],
+            Hero(
+              tag: 'logo',
+              child: Container(
+                child: Image.asset('images/logo.png'),
+                height: 200.0,
+              ),
             ),
+                SizedBox(
+                  height: 48.0,
+                ),
+                Padding(
+                  padding: EdgeInsets.only(left: 80.0),
+                  child: TypewriterAnimatedTextKit(
+                    text: ['Chatter'],
+                    textStyle: TextStyle(
+                      fontSize: 45.0,
+                      fontWeight: FontWeight.w900,
+                    ),
+                  ),
+                ),
             SizedBox(
               height: 48.0,
             ),
             RoundedButton(
               title: 'Log In',
-              colour: Colors.lightBlueAccent,
+              colour: Colors.deepPurple.shade300,
               onPressed: () {
                 Navigator.pushNamed(context, LoginScreen.id);
               },
             ),
             RoundedButton(
               title: 'Register',
-              colour: Colors.blueAccent,
+              colour: Colors.deepPurple.shade300,
               onPressed: () {
                 Navigator.pushNamed(context, RegistrationScreen.id);
               },
