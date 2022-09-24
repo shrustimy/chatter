@@ -1,6 +1,6 @@
 # Chatter
 
-A chatting app , where user can register , login and can chat with others . Firebase is used for Authentication and storage of messages. 
+A chatting app , where user can register , login and can chat with others . Firebase is used for Authentication and firestore database is used for storage of messages. 
 
 ## Getting Started
 
