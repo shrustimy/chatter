@@ -7,6 +7,8 @@ import 'package:flahchat/components/rounded_button.dart';
 class WelcomeScreen extends StatefulWidget {
   static const String id = 'welcome_screen';
 
+  const WelcomeScreen({Key? key}) : super(key: key);
+
   @override
   _WelcomeScreenState createState() => _WelcomeScreenState();
 }
@@ -21,7 +23,7 @@ class _WelcomeScreenState extends State<WelcomeScreen>
     super.initState();
 
     controller =
-        AnimationController(duration: Duration(seconds: 1), vsync: this);
+        AnimationController(duration: const Duration(seconds: 1), vsync: this);
     animation = ColorTween(begin: Colors.deepPurple.shade50, end: Colors.deepPurple.shade50)
         .animate(controller);
     controller.forward();
@@ -41,32 +43,32 @@ class _WelcomeScreenState extends State<WelcomeScreen>
     return Scaffold(
       backgroundColor: animation.value,
       body: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 24.0),
+        padding: const EdgeInsets.symmetric(horizontal: 24.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
             Hero(
               tag: 'logo',
-              child: Container(
+              child: SizedBox(
                 child: Image.asset('images/logo.png'),
                 height: 200.0,
               ),
             ),
-                SizedBox(
+                const SizedBox(
                   height: 48.0,
                 ),
                 Padding(
-                  padding: EdgeInsets.only(left: 80.0),
+                  padding: const EdgeInsets.only(left: 80.0),
                   child: TypewriterAnimatedTextKit(
-                    text: ['Chatter'],
-                    textStyle: TextStyle(
+                    text: const ['Chatter'],
+                    textStyle: const TextStyle(
                       fontSize: 45.0,
                       fontWeight: FontWeight.w900,
                     ),
                   ),
                 ),
-            SizedBox(
+            const SizedBox(
               height: 48.0,
             ),
             RoundedButton(
