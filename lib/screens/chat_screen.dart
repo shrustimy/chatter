@@ -8,6 +8,8 @@ late User loggedInUser;
 
 class ChatScreen extends StatefulWidget {
   static const String id = 'chat_screen';
+
+  ChatScreen({Key? key}) : super(key: key);
   @override
   _ChatScreenState createState() => _ChatScreenState();
 }
@@ -27,7 +29,7 @@ class _ChatScreenState extends State<ChatScreen> {
 
   void getCurrentUser() async {
     try {
-      final user = await _auth.currentUser!;
+      final user = _auth.currentUser!;
       if (user != null) {
         loggedInUser = user;
       }
@@ -97,6 +99,8 @@ class _ChatScreenState extends State<ChatScreen> {
 }
 
 class MessagesStream extends StatelessWidget {
+  const MessagesStream({Key? key}) : super(key: key);
+
   @override
 
   Widget build(BuildContext context) {
