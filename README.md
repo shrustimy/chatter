@@ -1,5 +1,7 @@
 # Chatter
 
+[![CodeFactor](https://www.codefactor.io/repository/github/shrustimy/chatter/badge/master)](https://www.codefactor.io/repository/github/shrustimy/chatter/overview/master)
+
 A chatting app , where user can register , login and can chat with others . Firebase is used for Authentication and firestore database is used for storage of messages. 
 
 - By building this app , I got to learn about integration of backend with frontend
