@@ -7,6 +7,8 @@ import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
 
 class RegistrationScreen extends StatefulWidget {
   static const String id = 'registration_screen';
+
+  const RegistrationScreen({Key? key}) : super(key: key);
   @override
   _RegistrationScreenState createState() => _RegistrationScreenState();
 }

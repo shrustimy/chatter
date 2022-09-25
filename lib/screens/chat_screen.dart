@@ -9,7 +9,7 @@ late User loggedInUser;
 class ChatScreen extends StatefulWidget {
   static const String id = 'chat_screen';
 
-  ChatScreen({Key? key}) : super(key: key);
+  const ChatScreen({Key? key}) : super(key: key);
   @override
   _ChatScreenState createState() => _ChatScreenState();
 }
@@ -60,7 +60,7 @@ class _ChatScreenState extends State<ChatScreen> {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
-            MessagesStream(),
+            const MessagesStream(),
             Container(
               decoration: kMessageContainerDecoration,
               child: Row(
